@@ -1,7 +1,7 @@
 document.querySelector("#getBtn").addEventListener("click", () => { 
     let xhr = new XMLHttpRequest(); 
   
-    xhr.open("GET", "https://raw.githubusercontent.com/HASTAR17/Web-Programming/refs/heads/main/ajax.json", true); 
+    xhr.open("GET", "https://raw.githubusercontent.com/ruhulaminn1316/ajax/refs/heads/main/ajax.json", true); 
   
     xhr.onload = () => { 
       if (xhr.status === 200) { // Success 
@@ -9,17 +9,6 @@ document.querySelector("#getBtn").addEventListener("click", () => {
         console.log("Response:", xhr.responseText);
   
         let data = JSON.parse(xhr.responseText);
-  
-        // Change the data here
-        data = {
-          name: "Ruhul Amin",
-          myid: "223002097",
-          email: "ruhulaminn1316@gmail.com",
-          phone: "+8801737145602",
-          social_media: "https://github.com/ruhulsamim",
-          languages: ["English", "Bengali", "French"],
-          hobbies: ["Web Development", "Reading", "Gaming"]
-        };
   
         displayFetchedData(data); 
       } else { 
